@@ -23,7 +23,7 @@ class HeroFactory extends Factory
             'gender' => $this->faker->word(),
             'race' => $this->faker->word(),
             'description' => $this->faker->paragraph(),
-            'skills_id' => rand(1, Skill::count()),
+            'skill_id' => rand(1, Skill::count()),
         ];
     }
 }

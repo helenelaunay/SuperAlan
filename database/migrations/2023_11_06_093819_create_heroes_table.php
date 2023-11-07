@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('heroes', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->string('name')->unique();
             $table->string('image')->nullable();
             $table->string('gender');
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->text('description');
             $table->timestamps();
 
-            $table->foreignId('skills_id');
+            $table->foreignId('skill_id')->constrained();
         });
     }
 
